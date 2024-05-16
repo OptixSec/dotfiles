@@ -1,0 +1,67 @@
+#
+# ~/.bashrc
+#
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
+export HISTFILE="$XDG_STATE_HOME/bash/history"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+
+export EDITOR='nvim'
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+### Aliases
+alias pacsu="sudo pacman -Su"
+alias pacsyu="sudo pacman -Syu"
+alias pacs="sudo pacman -S"
+alias pacss="pacman -Ss"
+
+alias yaysua="yay -Sua"
+alias yaysyua="yay -Syua"
+alias yaysa="yay -Sa"
+alias yayss="yay -Ssa"
+
+alias chezadd="chezmoi add"
+alias chezedit="chezmoi edit"
+alias chezdiff="chezmoi diff"
+alias chezapply="chezmoi -v apply"
+
+alias v="nvim"
+alias sv="sudo nvim"
+
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias tag='git tag'
+alias newtag='git tag -a'
+
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for change to take effect.'"
+alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for change to take effect.'"
+
+alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc'" 
+alias cat="bat"
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --no-permissions --all"
+
+alias ls='ls -hN --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+
+alias rc='source ~/.bashrc'
+
+PS1='[\u@\h \W]\$ '
+
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
