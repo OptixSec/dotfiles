@@ -20,8 +20,21 @@ set -x EDITOR nvim
 set -x BAT_THEME tokyonight_night
 
 ### Aliases
-alias p="sudo pacman"
-alias y="yay"
+alias pacsu="sudo pacman -Su"
+alias pacsyu="sudo pacman -Syu"
+alias pacs="sudo pacman -S"
+alias pacss="pacman -Ss"
+
+alias yaysua="yay -Sua"
+alias yaysyua="yay -Syua"
+alias yaysa="yay -Sa"
+alias yayss="yay -Ssa"
+
+alias chezadd="chezmoi add"
+alias chezedit="chezmoi edit"
+alias chezdiff="chezmoi diff"
+alias chezapply="chezmoi -v apply"
+
 alias v="nvim"
 alias sv="sudo nvim"
 
