@@ -195,7 +195,7 @@ for i in groups:
         ]
     )
 
-colors = colors.DoomOne
+colors = colors.Dracula
 
 layout_theme = {"border_width": 2,
                 "margin": 8,
