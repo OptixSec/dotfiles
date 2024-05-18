@@ -23,11 +23,13 @@ set -x BAT_THEME tokyonight_night
 alias pacsu="sudo pacman -Su"
 alias pacsyu="sudo pacman -Syu"
 alias pacs="sudo pacman -S"
+alias pacr="sudo pacman -R"
 alias pacss="pacman -Ss"
 
 alias yaysua="yay -Sua"
 alias yaysyua="yay -Syua"
 alias yaysa="yay -Sa"
+alias yayr="yay -R"
 alias yayss="yay -Ssa"
 
 alias chezadd="chezmoi add"
