@@ -152,7 +152,7 @@ keys = [
     KeyChord([mod], "p", [
         # Key([], "h", lazy.spawn("dm-hub -r"), desc='List all dmscripts'),
         Key([], "q", lazy.spawn(f"bash {scriptsFolder}/power_manager.sh"), desc='Power manager'),
-        Key([], "e", lazy.spawn("dm-confedit -r"), desc='Choose a config file to edit'),
+        Key([], "e", lazy.spawn(f"bash {scriptsFolder}/dmenu_scripts/edit_conf/edit_conf.sh"), desc='Choose a config file to edit'),
         Key([], "k", lazy.spawn("dm-kill -r"), desc='Kill processes '),
     ])
 ]
