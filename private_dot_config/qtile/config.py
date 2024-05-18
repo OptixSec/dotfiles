@@ -39,7 +39,7 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "kitty"      # My terminal of choice
 myBrowser = "brave"       # My browser of choice
 myEditor = "nvim" # My editor of choice
-scriptsFolder = "/home/nick/repos/bash_scripts/"
+scriptsFolder = "/home/nick/repos/bash_scripts/dmenu_scripts/"
 # Allows you to input a name when adding treetab section.
 @lazy.layout.function
 def add_treetab_section(layout):
@@ -151,8 +151,8 @@ keys = [
     # Dmenu/rofi scripts launched using the key chord SUPER+p followed by 'key'
     KeyChord([mod], "p", [
         # Key([], "h", lazy.spawn("dm-hub -r"), desc='List all dmscripts'),
-        Key([], "q", lazy.spawn(f"bash {scriptsFolder}/power_manager.sh"), desc='Power manager'),
-        Key([], "e", lazy.spawn(f"bash {scriptsFolder}/dmenu_scripts/edit_conf/edit_conf.sh"), desc='Choose a config file to edit'),
+        Key([], "q", lazy.spawn(f"bash {scriptsFolder}/power_manager/power_manager.sh"), desc='Power manager'),
+        Key([], "e", lazy.spawn(f"bash {scriptsFolder}/edit_conf/edit_conf/edit_conf.sh"), desc='Choose a config file to edit'),
         Key([], "k", lazy.spawn("dm-kill -r"), desc='Kill processes '),
     ])
 ]
