@@ -39,7 +39,7 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "kitty"      # My terminal of choice
 myBrowser = "brave"       # My browser of choice
 myEditor = "nvim" # My editor of choice
-scriptsFolder = "/home/nick/repos/bash_scripts/dmenu_scripts"
+scriptsFolder = "/home/nick/repos/bash/dmenu_scripts/"
 # Allows you to input a name when adding treetab section.
 @lazy.layout.function
 def add_treetab_section(layout):
