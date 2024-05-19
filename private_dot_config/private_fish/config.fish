@@ -19,7 +19,7 @@ set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 ### Environment Variables
 set -x EDITOR nvim
-set -x BAT_THEME tokyonight_night
+set -x BAT_THEME Dracula
 
 ### Aliases
 alias pacsu="sudo pacman -Su"
@@ -59,7 +59,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for 
 
 alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc'" 
 alias cat="bat"
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --group-directories-first --no-permissions --all"
+alias ls="eza --color=always --long --git --icons=always --no-time --no-user --group-directories-first --no-permissions --all"
 
 alias rc="source ~/.config/fish/config.fish"
 
