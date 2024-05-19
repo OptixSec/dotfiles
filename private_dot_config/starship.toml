@@ -1,7 +1,7 @@
 add_newline = true
 
-[line_break]
-disabled = true
+# [line_break]
+# disabled = true
 
 [aws]
 style = "bold #ffb86c"
