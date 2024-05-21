@@ -1,4 +1,4 @@
-fish_config theme choose "dracula"
+fish_config theme choose dracula
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
@@ -28,11 +28,7 @@ alias pacs="sudo pacman -S"
 alias pacr="sudo pacman -R"
 alias pacss="pacman -Ss"
 
-alias yaysua="yay -Sua"
-alias yaysyua="yay -Syua"
-alias yaysa="yay -Sa"
-alias yayr="yay -R"
-alias yayss="yay -Ssa"
+alias parsyua="paru -Syua"
 
 alias chezadd="chezmoi add"
 alias chezedit="chezmoi edit"
@@ -57,9 +53,19 @@ alias newtag='git tag -a'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for change to take effect.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for change to take effect.'"
 
-alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc'" 
+alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc'"
+
+alias grep='grep --color=auto'
 alias cat="bat"
 alias ls="eza --color=always --long --git --icons=always --no-time --no-user --group-directories-first --no-permissions --all"
+
+alias psa="ps auxf"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias psmem='ps auxf | sort -nr -k 4'
+alias pscpu='ps auxf | sort -nr -k 3'
+
+# get error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
 
 alias rc="source ~/.config/fish/config.fish"
 
