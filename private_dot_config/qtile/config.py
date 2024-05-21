@@ -39,7 +39,7 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "kitty"      # My terminal of choice
 myBrowser = "brave"       # My browser of choice
 myEditor = "nvim" # My editor of choice
-scriptsFolder = "/home/nick/repos/bash/dmenu_scripts/"
+scriptsFolder = "/home/nick/repos/bash/rofi_scripts/"
 # Allows you to input a name when adding treetab section.
 @lazy.layout.function
 def add_treetab_section(layout):
@@ -69,7 +69,7 @@ keys = [
     Key([mod], "b", lazy.spawn(myBrowser), desc='Web browser'),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "shift"], "r", lazy.reload_config(), lazy.spawn("bash ~/.config/polybar/launch.sh"), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.spawn("dm-logout -r"), desc="Logout menu"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     
@@ -146,7 +146,7 @@ keys = [
     Key([mod], "comma", lazy.prev_screen(), desc='Move focus to prev monitor'),
     
     # Launch my editor of choice
-    Key([mod], "e", lazy.spawn(f"kitty {myEditor}"), desc="Launch Neovim"),
+    Key([mod], "e", lazy.spawn(f"{myTerm} {myEditor}"), desc="Launch Neovim"),
 
     # Dmenu/rofi scripts launched using the key chord SUPER+p followed by 'key'
     KeyChord([mod], "p", [
@@ -161,8 +161,8 @@ keys = [
 groups = []
 group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
 
-#group_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
-group_labels = ["DEV", "WWW", "SYS", "DOC", "VBOX", "CHAT", "MUS", "VID", "GFX",]
+group_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
+#group_labels = ["DEV", "WWW", "SYS", "DOC", "VBOX", "CHAT", "MUS", "VID", "GFX",]
 #group_labels = ["", "", "", "", "", "", "", "", "",]
 
 group_layouts = ["monadtall", "monadtall", "tile", "tile", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall"]
@@ -420,9 +420,7 @@ def init_widgets_screen2():
 # For ex: Screen(top=bar.Bar(widgets=init_widgets_screen2(), background="#00000000", size=24)),
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26)),
-            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26))]
+    return [Screen()]
 
 if __name__ in ["config", "__main__"]:
     screens = init_screens()
