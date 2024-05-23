@@ -23,9 +23,9 @@ set -x BAT_THEME Dracula
 
 ### Aliases
 
-alias mp="bash $HOME/repos/python/music_player/music_player.py"
-alias ytdl="bash $HOME/repos/python/yt_audio/yt_audio.py"
-alias conv="bash $HOME/repos/python/audio_converter/audio_converter.py"
+alias mp="python $HOME/repos/python/music_player/music_player.py"
+alias ytdl="python $HOME/repos/python/yt_audio/yt_audio.py"
+alias conv="python $HOME/repos/python/audio_converter/audio_converter.py"
 
 alias pacsu="sudo pacman -Su"
 alias pacsyu="sudo pacman -Syu"
