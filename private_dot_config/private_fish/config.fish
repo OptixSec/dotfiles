@@ -23,10 +23,10 @@ set -x BAT_THEME Dracula
 
 ### Aliases
 
-alias pyenv=""
+#alias pyenv=""
 alias mp="music_player"
-alias ytdl=""
-alias conv=""
+#alias ytdl=""
+#alias conv=""
 
 alias pacsu="sudo pacman -Su"
 alias pacsyu="sudo pacman -Syu"
