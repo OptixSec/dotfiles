@@ -23,10 +23,10 @@ set -x BAT_THEME Dracula
 
 ### Aliases
 
-alias pyenv="source $HOME/python_env/"
-alias mp="python $HOME/repos/python/music_player/music_player.py"
-alias ytdl="python $HOME/repos/python/yt_audio/yt_audio.py"
-alias conv="python $HOME/repos/python/audio_converter/audio_converter.py"
+alias pyenv=""
+alias mp="music_player"
+alias ytdl=""
+alias conv=""
 
 alias pacsu="sudo pacman -Su"
 alias pacsyu="sudo pacman -Syu"
@@ -78,3 +78,6 @@ alias rc="source ~/.config/fish/config.fish"
 ### Initialize Starship and Zoxide
 starship init fish | source
 zoxide init fish | source
+
+# Created by `pipx` on 2024-05-23 15:38:55
+set PATH $PATH /home/nick/.local/bin
