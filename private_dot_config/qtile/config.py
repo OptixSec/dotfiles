@@ -26,6 +26,7 @@
 
 import os
 import subprocess
+from pathlib import Path
 from libqtile import bar, extension, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, KeyChord, Match, Screen
 from libqtile.lazy import lazy
@@ -39,7 +40,8 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "kitty"      # My terminal of choice
 myBrowser = "brave"       # My browser of choice
 myEditor = "nvim" # My editor of choice
-scriptsFolder = "/home/nick/repos/bash/rofi_scripts/"
+homePath = Path.home()
+
 # Allows you to input a name when adding treetab section.
 @lazy.layout.function
 def add_treetab_section(layout):
@@ -69,12 +71,12 @@ keys = [
     Key([mod], "b", lazy.spawn(myBrowser), desc='Web browser'),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "shift"], "r", lazy.reload_config(), lazy.spawn("bash ~/.config/polybar/launch.sh"), desc="Reload the config"),
+    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.spawn("dm-logout -r"), desc="Logout menu"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
-    Key([mod], "w", lazy.spawn("bash ~/repos/bash/system_management/change_wallpaper.sh"), desc="Change the current wallpaper to a random one"),
+    Key([mod], "r", lazy.spawncmd(), lazy.spawn(f"bash {homePath}/.config/polybar/launch.sh"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "w", lazy.spawn(f"bash {homePath}/repos/bash/system_management/change_wallpaper.sh"), desc="Change the current wallpaper to a random one"),
     
-    # Switch between windows
+    # Switch between windows:
     # Some layouts like 'monadtall' only need to use j/k to move
     # through the stack, but other layouts like 'columns' will
     # require all four directions h/j/k/l to move around.
@@ -152,9 +154,9 @@ keys = [
     # Dmenu/rofi scripts launched using the key chord SUPER+p followed by 'key'
     KeyChord([mod], "p", [
         # Key([], "h", lazy.spawn("dm-hub -r"), desc='List all dmscripts'),
-        Key([], "q", lazy.spawn(f"bash {scriptsFolder}/power_manager/power_manager.sh"), desc='Power manager'),
-        Key([], "e", lazy.spawn(f"bash {scriptsFolder}/edit_conf/edit_conf.sh"), desc='Choose a config file to edit'),
-        Key([], "l", lazy.spawn(f"bash {scriptsFolder}/view_log/view_log.sh"), desc='Choose a log file to view'),
+        Key([], "q", lazy.spawn(f"bash {homePath}/repos/bash/rofi_scripts/power_manager/power_manager.sh"), desc='Power manager'),
+        Key([], "e", lazy.spawn(f"bash {homePath}/repos/bash/rofi_scripts/edit_conf/edit_conf.sh"), desc='Choose a config file to edit'),
+        Key([], "l", lazy.spawn(f"bash {homePath}/repos/bash/rofi_scripts/view_log/view_log.sh"), desc='Choose a log file to view'),
         Key([], "k", lazy.spawn("dm-kill -r"), desc='Kill processes '),
     ])
 ]
