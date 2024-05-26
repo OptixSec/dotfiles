@@ -72,6 +72,7 @@ keys = [
     Key([mod, "shift"], "r", lazy.reload_config(), lazy.spawn("bash ~/.config/polybar/launch.sh"), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.spawn("dm-logout -r"), desc="Logout menu"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "w", lazy.spawn("bash ~/repos/bash/system_management/change_wallpaper.sh"), desc="Change the current wallpaper to a random one"),
     
     # Switch between windows
     # Some layouts like 'monadtall' only need to use j/k to move
