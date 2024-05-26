@@ -16,6 +16,7 @@ set -x HISTFILE "$XDG_STATE_HOME/bash/history"
 set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
 set -x GNUPGHOME "$XDG_DATA_HOME/gnupg"
 set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+set -x CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
 
 ### Environment Variables
 set -x EDITOR nvim
