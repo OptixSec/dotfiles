@@ -20,21 +20,24 @@ set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 ### Environment Variables
 set -x EDITOR nvim
 set -x BAT_THEME Dracula
+set -x MUSIC_DIR "$HOME/Music/"
 
 ### Aliases
 
-#alias pyenv=""
+alias pyenv="source /usr/bin/python_venv/bin/activate.fish"
 alias mp="music_player"
 alias yt="yt_audio"
 alias cv="audio_converter"
 
-alias pacsu="sudo pacman -Su"
 alias pacsyu="sudo pacman -Syu"
 alias pacs="sudo pacman -S"
 alias pacr="sudo pacman -R"
 alias pacss="pacman -Ss"
 
-alias parsyua="paru -Syua"
+alias parsyu="paru -Syu"
+alias pars="paru -S"
+alias parr="paru -R"
+alias parss="paru -Ss"
 
 alias chezadd="chezmoi add"
 alias chezedit="chezmoi edit"
