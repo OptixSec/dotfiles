@@ -21,6 +21,7 @@ set -x CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
 ### Environment Variables
 set -x EDITOR nvim
 set -x BAT_THEME Dracula
+set -x GTK_THEME Adwaita-dark
 set -x MUSIC_DIR "$HOME/Music/"
 
 ### Aliases

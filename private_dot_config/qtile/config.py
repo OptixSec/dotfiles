@@ -71,9 +71,9 @@ keys = [
     Key([mod], "b", lazy.spawn(myBrowser), desc='Web browser'),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "shift"], "r", lazy.reload_config(), lazy.spawn(f"bash {homePath}/.config/polybar/launch.sh"), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.spawn("dm-logout -r"), desc="Logout menu"),
-    Key([mod], "r", lazy.spawncmd(), lazy.spawn(f"bash {homePath}/.config/polybar/launch.sh"), desc="Spawn a command using a prompt widget"),
+    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "w", lazy.spawn(f"bash {homePath}/repos/bash/system_management/change_wallpaper.sh"), desc="Change the current wallpaper to a random one"),
     
     # Switch between windows:
