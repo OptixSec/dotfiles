@@ -200,7 +200,7 @@ for i in groups:
 
 colors = colors.Dracula
 
-layout_theme = {"border_width": 2,
+layout_theme = {"border_width": 3,
                 "margin": 8,
                 "border_focus": colors[6],
                 "border_normal": colors[0]
