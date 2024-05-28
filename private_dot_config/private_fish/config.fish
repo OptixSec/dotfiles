@@ -26,6 +26,8 @@ set -x MUSIC_DIR "$HOME/Music/"
 
 ### Aliases
 
+alias qtile-restart="qtile cmd-obj -o cmd -f restart"
+
 alias pyenv="source /usr/bin/python_venv/bin/activate.fish"
 alias mp="music_player"
 alias yt="yt_audio"
@@ -42,9 +44,11 @@ alias parr="paru -R"
 alias parss="paru -Ss"
 
 alias chezadd="chezmoi add"
+alias chezreadd="chezmoi re-add"
 alias chezedit="chezmoi edit"
 alias chezdiff="chezmoi diff"
 alias chezapply="chezmoi -v apply"
+alias chezcd="chezmoi cd"
 
 alias v="nvim"
 alias sv="sudo nvim"

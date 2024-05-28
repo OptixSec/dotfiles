@@ -4,7 +4,7 @@ COLORSCHEME=Dracula
 
 ### AUTOSTART PROGRAMS ###
 lxsession &
-picom --daemon &
+picom --daemon --config ~/.config/picom/picom.conf &
 dunst &
 # /usr/bin/emacs --daemon &
 nm-applet &

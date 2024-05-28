@@ -202,7 +202,7 @@ colors = colors.Dracula
 
 layout_theme = {"border_width": 2,
                 "margin": 8,
-                "border_focus": colors[8],
+                "border_focus": colors[6],
                 "border_normal": colors[0]
                 }
 
@@ -251,7 +251,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="Ubuntu Bold",
+    font="FiraCode Nerd Font Bold",
     fontsize = 12,
     padding = 0,
     background=colors[0]
@@ -267,7 +267,7 @@ def init_widgets_list():
                  mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
                  ),
         widget.Prompt(
-                 font = "Ubuntu Mono",
+                 font = "FiraCode Nerd Font Mono",
                  fontsize=14,
                  foreground = colors[1]
         ),
@@ -290,7 +290,7 @@ def init_widgets_list():
                  ),
         widget.TextBox(
                  text = '|',
-                 font = "Ubuntu Mono",
+                 font = "FiraCode Nerd Font Mono",
                  foreground = colors[1],
                  padding = 2,
                  fontsize = 14
@@ -307,7 +307,7 @@ def init_widgets_list():
                  ),
         widget.TextBox(
                  text = '|',
-                 font = "Ubuntu Mono",
+                 font = "FiraCode Nerd Font Mono",
                  foreground = colors[1],
                  padding = 2,
                  fontsize = 14
@@ -470,7 +470,7 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-    border_focus=colors[8],
+    border_focus=colors[7],
     border_width=2,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
