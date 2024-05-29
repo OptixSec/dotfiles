@@ -18,13 +18,19 @@ set -x GNUPGHOME "$XDG_DATA_HOME/gnupg"
 set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 set -x CUDA_CACHE_PATH "$XDG_CACHE_HOME/nv"
 
-### Environment Variables
+### Environment Variables ###
 set -x EDITOR nvim
 set -x BAT_THEME Dracula
 set -x GTK_THEME Adwaita-dark
 set -x MUSIC_DIR "$HOME/Music/"
 
-### Aliases
+### Functions ###
+
+function fish_greeting
+    fastfetch
+end
+
+### Aliases ###
 
 alias qtile-restart="qtile cmd-obj -o cmd -f restart"
 
