@@ -67,3 +67,4 @@ PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+if [ -f "/home/nick/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/nick/.config/fabric/fabric-bootstrap.inc"; fi

@@ -75,6 +75,7 @@ keys = [
     Key([mod, "shift"], "q", lazy.spawn("dm-logout -r"), desc="Logout menu"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "w", lazy.spawn(f"bash {homePath}/repos/bash/system_management/change_wallpaper.sh"), desc="Change the current wallpaper to a random one"),
+    Key([mod], "s", lazy.spawn("flameshot gui"), desc="Take a screenshot"),
     
     # Switch between windows:
     # Some layouts like 'monadtall' only need to use j/k to move
