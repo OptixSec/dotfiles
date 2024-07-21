@@ -80,6 +80,7 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Log out and log back in for 
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Log out and log back in for change to take effect.'"
 
 alias nvidia-settings="nvidia-settings --config='$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc'"
+alias setx="xset -dpms && xset s off"
 
 alias grep='grep --color=auto'
 alias cat="bat"
